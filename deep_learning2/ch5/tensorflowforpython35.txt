@@ -1,0 +1,39 @@
+conda create --name tensorflow python=3.5
+activate tensorflow
+pip install tensorflow-gpu
+
+-----------------------------------------------
+https://stackoverflow.com/questions/43419795/how-to-install-tensorflow-on-anaconda-python-3-6
+------------------------------------------------
+
+This is what I did for Installing Anaconda Python 3.6 version and Tensorflow on Window 10 64bit.And It was success!
+
+1.Download Anaconda Python 3.6 version for Window 64bit.
+
+
+2.Create a conda environment named tensorflow by invoking the following command:
+C:> conda create -n tensorflow 
+
+
+3.Activate the conda environment by issuing the following command:
+C:> activate tensorflow
+(tensorflow)C:>  # Your prompt should change 
+
+
+4.Download ¡°tensorflow-1.0.1-cp36-cp36m-win_amd64.whl¡± from here. (For my case, the file will be located in ¡°C:\Users\Joshua\Downloads¡± once after downloaded).
+
+
+5.Install the Tensorflow by using following command:
+(tensorflow)C:>pip install C:\Users\Joshua\Downloads\ tensorflow-1.0.1-cp36-cp36m-win_amd64.whl
+
+
+This is what I got after the installing: enter image description here
+
+6.Validate installation by entering following command in your Python environment:
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
+
+
+If the output you got is 'Hello, TensorFlow!',that means you have successfully install your Tensorflow.
